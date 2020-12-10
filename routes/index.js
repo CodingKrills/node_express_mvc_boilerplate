@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 
-router('/', (req,res)=> {
-    res.json('Hello World')
+router.get('/', (req,res)=> {
+    res.render('index', {
+        helloWorld : "Hello World !"
+    })
 })
 
 
